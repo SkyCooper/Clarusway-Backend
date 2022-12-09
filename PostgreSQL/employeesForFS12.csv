@@ -1,0 +1,15 @@
+emp_id;empmame;empsurname;gender;region;job;salary;hiredate
+1;Arnold;Miller;Male;Central;Administrative;3000;2018-02-21
+2;Maddie;Cameron;Female;West;Administrative;3200;2019-06-19
+3;Dominik;Holmes;Male;East;Administrative;3500;2018-07-03
+4;Wilson;Casey;Male;Central;Sales;2500;2018-05-29
+5;Vincent;Perry;Male;West;Sales;2400;2019-09-21
+6;Jasmine;Wright;Female;East;Sales;2000;2018-11-23
+7;Belinda;Barrett;Female;Central;Sales;2300;2018-11-29
+8;Tony;Chapman;Male;West;Sales;2400;2019-07-02
+9;Sophia;Warren;Female;West;Sales;2200;2019-06-25
+10;Jack;Fowler;Male;East;Sales;2500;2018-10-13
+11;Rubie;Perkins;Female;Central;Sales;2900;2018-02-16
+12;Ryan;Wells;Male;Central;Technical;3000;2018-08-08
+13;Henry;Perry;Male;West;Technical;3100;2019-05-22
+14;Isabella;West;Female;East;Technical;3050;2018-05-25

@@ -1,0 +1,48 @@
+açılış şifresi : Mysky2012**
+
+**** 1- var olan csv uzantılı dosya üzerinden database oluşturmak için; *****
+
+Databases üzerinde sağ tık --> create --> database
+sadece ismini yaz ve kayıt et, Databases altında oluştu.
+
+bu database içine table eklemek için;
+Oluşturulan database'den --> schemas --> Tables --> sağ tık --> create --> table
+general sekmesinden isim verdikten sonra,
+Columns sekmesinden (+) ile sütünları ekle ve datatype seç (numeric, character varying, char,date vs..)
+burada önemli olan csv uzantılı excell dosyasındaki sütün isimleri ile column name'lerin aynı olması, SAVE dedikten sonra table oluştu.
+
+sonra oluşan table üzerine sağ tık --> Import/Export data, açılan pendereden,
+import seçip csv uzantılı dosyayı filaneme yerine ekle (bilgisayarda nerde ise o dosya yolunu seç)
+format --> csv, encoding --> UTF8 olacak.
+Options sekmesinden --> header aktif yap, delimeter ( ; ) seç.
+Columns sekmesinden --> columns to import boş gelmiş ise tablodaki sıra ile sütün ismlerini seç ve kayıt et.
+Process started --> Process copmleted ise başarılı olmuş demektir..
+
+sorgu yazmak için --> oluşturulan tablo üzerinde sağ tık --> Query Tool seç, açılan ekranda Query sekmesinde istediğin sorguyu yaz.
+
+select * from employees; sorgusu ile 14 kayıt gelmesi gerekiyor.
+
+
+ **** 2-sql uzantılı dosya üzerinden database oluşturmak için; *****
+
+Databases üzerinde sağ tık --> create --> database
+sadece ismini yaz ve kayıt et, Databases altında oluştu.
+
+bu database içine table eklemek için;
+sql uzantılı dosyayı notepad ile aç, bütün hepsini seç ve kopyala,
+Oluşturulan database'den --> schemas --> Tables --> sağ tık --> Query Tool seç 
+açılan soru ekranına norepad'den seçtiğin komutları (15816 satır kod var) yapıştır ve kodları çalıştır.
+
+Oluşturulan database içinde Tables altında 11 adet table oluştu.
+Artık sorgu yazmak için, Query sekmesindeki komutları temizle (Ctrl+A --> delete)
+
+select * from "Album"; sorgusu ile 347 kayıt gelmesi gerekiyor.
+select * from "Invoice"; sorgusu ile 412 kayıt gelmesi gerekiyor.
+seçilecek table ismini yukarıdaki gibi çift tırnak içinde yaz..
+
+FROM'dan sonra table isminin baş harflerini yazıpı Ctrl+Space yapınca otomatik tamamlama çıkıyor ve çift tırnak içinde isimleri öneriyor.
+
+
+
+
+
