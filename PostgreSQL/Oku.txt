@@ -1,4 +1,4 @@
-açılış şifresi : Mysky2012**
+şifre : Mysky2012**
 
 **** 1- var olan csv uzantılı dosya üzerinden database oluşturmak için; *****
 
@@ -42,6 +42,16 @@ seçilecek table ismini yukarıdaki gibi çift tırnak içinde yaz..
 
 FROM'dan sonra table isminin baş harflerini yazıpı Ctrl+Space yapınca otomatik tamamlama çıkıyor ve çift tırnak içinde isimleri öneriyor.
 
+
+
+
+ **** 3- SQL Shell ile database oluşturmak için; *****
+
+- Open the SQL Shell (başlata SQL Shell yaz, siyah ekran açılacak)
+- Açılan ekranda 4 kere ENTER a bas, ( Password satırı çıkana kadar)
+- Database oluşturmak için,  ( CREATE DATABASE dbname; ) (örnek --> CREATE DATABASE fs0721; )
+- Mevcut database listesine bakmak için, \l komutunu yaz
+- Bir database bağlanmak için ( \c dbname ) (örnek --> \c fs0721 )
 
 
 
