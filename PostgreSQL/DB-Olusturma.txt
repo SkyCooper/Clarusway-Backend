@@ -1,6 +1,13 @@
 şifre : Mysky2012**
 
+************************************************
+************** DATABASE OLUŞTURMA **************
+************************************************
+
+
+*****************************************************************************
 **** 1- var olan csv uzantılı dosya üzerinden database oluşturmak için; *****
+*****************************************************************************
 
 Databases üzerinde sağ tık --> create --> database
 sadece ismini yaz ve kayıt et, Databases altında oluştu.
@@ -23,13 +30,16 @@ sorgu yazmak için --> oluşturulan tablo üzerinde sağ tık --> Query Tool se�
 select * from employees; sorgusu ile 14 kayıt gelmesi gerekiyor.
 
 
- **** 2-sql uzantılı dosya üzerinden database oluşturmak için; *****
+*******************************************************************
+**** 2-sql uzantılı dosya üzerinden database oluşturmak için; *****
+*******************************************************************
 
 Databases üzerinde sağ tık --> create --> database
 sadece ismini yaz ve kayıt et, Databases altında oluştu.
 
 bu database içine table eklemek için;
 sql uzantılı dosyayı notepad ile aç, bütün hepsini seç ve kopyala,
+( Chinook_PostgreSql.sql dosyasını)
 Oluşturulan database'den --> schemas --> Tables --> sağ tık --> Query Tool seç 
 açılan soru ekranına norepad'den seçtiğin komutları (15816 satır kod var) yapıştır ve kodları çalıştır.
 
@@ -44,8 +54,10 @@ FROM'dan sonra table isminin baş harflerini yazıpı Ctrl+Space yapınca otomat
 
 
 
+*******************************************************************
+********* 3- SQL Shell ile database oluşturmak için; **************
+*******************************************************************
 
- **** 3- SQL Shell ile database oluşturmak için; *****
 
 - Open the SQL Shell (başlata SQL Shell yaz, siyah ekran açılacak)
 - Açılan ekranda 4 kere ENTER a bas, ( Password satırı çıkana kadar)
