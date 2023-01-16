@@ -1,0 +1,6 @@
+FROM python:alpine3.17
+WORKDIR /app
+# COPY apps.py /app
+COPY . .
+# RUN pip install -r req
+CMD python apps.py
