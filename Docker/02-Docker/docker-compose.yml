@@ -1,0 +1,24 @@
+version: "3.8"
+
+services:
+  backend:
+    image: docker-compose-backend
+    build: ./backend
+    ports:
+      - 8000:8000
+    restart: on-failure
+    volumes:
+      - ./backend/db.sqlite3:/backend/db.sqlite3
+      - ./backend:/backend
+
+  frontend:
+    container_name: frontend
+    image: docker-compose-fronted
+    build: ./frontend
+    ports:
+      - 3000:3000
+    restart: on-failure
+    depends_on:
+      - backend
+    volumes:
+      - ./fronted:/fronted
