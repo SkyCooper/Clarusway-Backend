@@ -57,10 +57,12 @@ docker images
 docker run -p 8000:8000 --name cooperbackend  backend:1
 
 #
-
+docker compose up
+docker compose up -d
+docker compose down
 
 #
-
+docker compose exec backend python manage.py migrate
 
 
 #

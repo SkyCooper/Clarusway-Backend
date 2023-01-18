@@ -10,10 +10,12 @@ services:
     volumes:
       - ./backend/db.sqlite3:/backend/db.sqlite3
       - ./backend:/backend
+    depends_on:
+      - db
 
   frontend:
     container_name: frontend
-    image: docker-compose-fronted
+    image: docker-compose-frontend
     build: ./frontend
     ports:
       - 3000:3000
@@ -21,4 +23,17 @@ services:
     depends_on:
       - backend
     volumes:
-      - ./fronted:/fronted
+      - ./frontend:/frontend
+
+  db:
+    image: postgres:13-alpine
+    environment:
+      - POSTGRES_USER=cooper
+      - POSTGRES_PASSWORD=Mysky2012**
+      - POSTGRES_DB=docker_django
+
+    volumes:
+      - pg_data:/var/lib/postgresql/data/
+
+volumes:
+  pg_data:
