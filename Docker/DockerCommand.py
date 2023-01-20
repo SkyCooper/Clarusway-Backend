@@ -60,10 +60,12 @@ docker run hello-world:1
 
 # çalışan containerları görmek için;
 docker ps
+docker container ls
 # boş gelebilir sadece yukarıdaki komutlar çalıştıysa, çünkü container oluştu, apps.py dosyasını çalıştırdı ve işi bitti,
 
 # çalışan/çalışmayan containerları görmek için;
 docker ps -a
+docker container ls -a
 # burada ise çalışmasa bile mutlaka görünür, 
 
 # interaktif modda çalıştırmak için --> (it)
@@ -160,13 +162,18 @@ python -m venv env
 source env/Script/activate
 
 # requirements yükle,
-pip install -r requirement.txt
+pip install -r requirements.txt
 
 # env dosyasını oluştur,
 SECRET_KEY=VSVHSSY98SYSHVSHDVISHV
+# ihtiyaç varsa
+DEBUG=True
 
 # migrate yap
 python manage.py migrate
+
+# superuser oluştur
+python manage.py createsuperuser
 
 # localde çalıştır
 python manage.py runserver
@@ -228,12 +235,21 @@ docker images(ile bakılabilir)
 -frontend için 3000:3000
 --name container ismi
 -en sona hangi IMAGE'den create edilecekse onun ismi,
-docker run -p -d 8000:8000 --name nameofCONTAINER nameofIMAGE
+docker run -d -p 8000:8000 --name nameofCONTAINER nameofIMAGE
 
-docker run -p -d 8000:8000 --name backend backend:v1
+docker run -d -p 8000:8000 --name backend backend:v1
 # veya
 docker run -p -d 3000:3000 --name frontend frontend:v1
 # artık DOCKER üzerinde projeler çalışıyor,(frontend daha geç gelebilir)
+
+# backend no such table hatası varsa migrate yapmak gerekli,
+docker exec nameofCONTAINER python manage.py migrate
+docker exec backend python manage.py migrate
+
+# dockerize olmuş projede superuser oluşturmak için;
+docker exec -it CONTAINERID(ilk3) python manage.py createsuperuser
+docker exec -it abc python manage.py createsuperuser
+
 
 # aslında sadece 
 docker run nameofIMAGE
